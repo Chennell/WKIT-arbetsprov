@@ -17,6 +17,24 @@ if ( ! isset( $content_width ) ) $content_width = 900;
 /*-----------------------------------------------------------------------------------*/
 add_theme_support( 'automatic-feed-links' );
 
+
+/*-----------------------------------------------------------------------------------*/
+/* Add custom logo to the theme
+/*-----------------------------------------------------------------------------------*/
+add_theme_support( 'custom-logo' );
+
+function WKIT_custom_logo_setup() {
+ $defaults = array(
+	 'height'      => 100,
+	 'width'       => 400,
+	 'flex-height' => true,
+	 'flex-width'  => true,
+	 'header-text' => array( 'site-title', 'site-description' ),
+ );
+ add_theme_support( 'custom-logo', $defaults );
+}
+add_action( 'after_setup_theme', 'WKIT_custom_logo_setup' );
+
 /*-----------------------------------------------------------------------------------*/
 /* Add post thumbnail/featured image support
 /*-----------------------------------------------------------------------------------*/
@@ -49,9 +67,31 @@ function naked_register_sidebars() {
 		// Copy and paste the lines above right here if you want to make another sidebar, 
 		// just change the values of id and name to another word/name
 	));
+	
+	register_sidebar( array(
+		'name'          => 'Footer area one',
+		'id'            => 'footer_area_one',
+		'description'   => 'This is the footer area two the left',
+		'before_widget' => '<section class="footer-area footer-area-one">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	  ));
+
+	register_sidebar( array(
+		'name'          => 'Footer area two',
+		'id'            => 'footer_area_two',
+		'description'   => 'This is the footer area two the right',
+		'before_widget' => '<section class="footer-area footer-area-two">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h4>',
+		'after_title'   => '</h4>',
+	  ));
 } 
 // adding sidebars to Wordpress (these are created in functions.php)
 add_action( 'widgets_init', 'naked_register_sidebars' );
+
+
 
 /*-----------------------------------------------------------------------------------*/
 /* Enqueue Styles and Scripts

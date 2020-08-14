@@ -8,14 +8,9 @@
 </main><!-- / end page container, begun in the header -->
 
 <footer class="site-footer">
-	<div class="site-info container">
-		
-		<p>Birthed <a href="http://bckmn.com/naked-wordpress" rel="theme">Naked</a> 
-			on <a href="http://wordpress.org" rel="generator">Wordpress</a> 
-			by <a href="http://bckmn.com" rel="designer">Joshua Beckman</a>
-		</p>
-		
-	</div><!-- .site-info -->
+	
+	 <?php dynamic_sidebar( 'footer_area_one' ); ?>
+	 <?php dynamic_sidebar( 'footer_area_two' ); ?>
 </footer><!-- #colophon .site-footer -->
 
 <?php wp_footer(); 

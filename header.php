@@ -16,6 +16,7 @@
 
 <link rel="profile" href="http://gmpg.org/xfn/11" />
 <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 <?php // We are loading our theme directory style.css by queuing scripts in our functions.php file, 
 	// so if you want to load other stylesheets,
 	// I would load them with an @import call in your style.css
@@ -26,12 +27,7 @@
 <script src="<?php echo get_template_directory_uri(); ?>/js/html5.js" type="text/javascript"></script>
 <![endif]-->
 
-<?php wp_head(); 
-// This fxn allows plugins, and Wordpress itself, to insert themselves/scripts/css/files
-// (right here) into the head of your website. 
-// Removing this fxn call will disable all kinds of plugins and Wordpress default insertions. 
-// Move it if you like, but I would keep it around.
-?>
+<?php wp_head(); ?>
 
 </head>
 
@@ -48,14 +44,19 @@
 	<div class="container center">
 	
 		<nav class="site-navigation main-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); // Display the user-defined menu in Appearance > Menus ?>
-		</nav><!-- .site-navigation .main-navigation -->
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav>
 	</div>
 	<div class="center">
 
 		<div id="brand">
 			<h1 class="site-title">
-				<a href="<?php echo esc_url( home_url( '/' ) ); // Link to the home page ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); // Title it with the blog name ?>" rel="home"><?php bloginfo( 'name' ); // Display the blog name ?></a>
+				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) );  ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
+				
+				<!--- Adding the logo--->
+				<?php if ( function_exists( 'the_custom_logo' ) ) {
+					 the_custom_logo();
+					}?>
 			</h1>
 			<h4 class="site-description">
 				<?php bloginfo( 'description' ); // Display the blog description, found in General Settings ?>

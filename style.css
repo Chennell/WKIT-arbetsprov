@@ -1,5 +1,6 @@
 @import url(http://fonts.googleapis.com/css?family=Karla|Quicksand);
 @import url('styles/boots-bones.css');
+@import "styles/style2.css";
 /*
 Theme Name: We know IT - arbetsprov
 Theme URI: http://bckmn.com/naked-wordpress
@@ -12,6 +13,7 @@ License: GNU General Public License
 -------------------------------------------------------------- */
 /* Reset
 -------------------------------------------------------------- */
+
 
 html,
 body,
