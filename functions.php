@@ -35,6 +35,33 @@ function WKIT_custom_logo_setup() {
 }
 add_action( 'after_setup_theme', 'WKIT_custom_logo_setup' );
 
+
+
+/*-----------------------------------------------------------------------------------*/
+/* Add hero img
+/*-----------------------------------------------------------------------------------*/
+
+$header_info = array(
+    'width'         => 980,
+    'height'        => 200,
+    'default-image' => get_template_directory_uri() . '/img/blue.jpg',
+);
+add_theme_support( 'custom-header', $header_info );
+ 
+$header_images = array(
+    'sunset' => array(
+            'url'           => get_template_directory_uri() . '/img/blue.jpg',
+            'thumbnail_url' => get_template_directory_uri() . '/img/blue.jpg',
+            'description'   => 'Blue',
+    ),
+    'flower' => array(
+            'url'           => get_template_directory_uri() . '/img/books.jpg',
+            'thumbnail_url' => get_template_directory_uri() . '/img/books.jpg',
+            'description'   => 'books',
+    ),  
+);
+register_default_headers( $header_images );
+
 /*-----------------------------------------------------------------------------------*/
 /* Add post thumbnail/featured image support
 /*-----------------------------------------------------------------------------------*/
