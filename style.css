@@ -552,10 +552,10 @@ article .the-content a {
   font-weight: 900;
   text-decoration: none;
 }
-article .the-content p {
+/*article .the-content p {
   color: #191919;
   text-align: justify;
-}
+}*/
 article .the-content img {
   width: 100%;
   height: auto;

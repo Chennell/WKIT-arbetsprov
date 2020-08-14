@@ -1,10 +1,60 @@
 @charset "UTF-8";
 /* CSS Document */
 
+/* fäger
+	Primär: #82ccdd;
+	Primär?: #60a3bc
+	sekundär: #079992
+
+	Grå
+		ljus: #eeeeee;
+		mellan-ljus: #dedede;
+		mellan mörk: #8a8a8a;
+		Mörk: #5a5a5a;
+	
+*/
+
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Playfair Display', serif !important;
+	color: #60a3bc;
 }
 
 p, ul, li a{
 	font-family: 'Roboto', sans-serif  !important;
+	color: #5a5a5a;
 }
+
+
+
+
+/****************Styling av header**************/
+#masthead{
+	max-width: 1366px;
+	min-width: 320px;
+	width: 95%;
+	position: relative;
+	overflow: hidden;
+}
+
+.logo-box{
+	width: 40%;
+}
+
+.logo-box img{
+	width: 100%;
+	height: auto;
+}
+
+
+.menu{
+	position: absolute;
+	bottom: 1.5em;
+	right: 0;
+}
+
+@media only screen and (min-width: 750px) {
+	.logo-box{
+		width: 20%;
+	}
+}
+

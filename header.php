@@ -41,30 +41,34 @@
 >
 
 <header id="masthead" class="site-header">
-	<div class="container center">
-	
-		<nav class="site-navigation main-navigation">
-			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
-		</nav>
-	</div>
-	<div class="center">
+	<div class="site-identity">
 
 		<div id="brand">
 			<h1 class="site-title">
 				<a href="<?php echo esc_url( home_url( '/' ) ); ?>" title="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) );  ?>" rel="home"><?php bloginfo( 'name' ); ?></a>
-				
-				<!--- Adding the logo--->
-				<?php if ( function_exists( 'the_custom_logo' ) ) {
-					 the_custom_logo();
-					}?>
 			</h1>
 			<h4 class="site-description">
 				<?php bloginfo( 'description' ); // Display the blog description, found in General Settings ?>
 			</h4>
+			<div class="logo-box">		
+			<!--- Adding the logo--->
+				<?php if ( function_exists( 'the_custom_logo' ) ) {
+					 the_custom_logo();?>
+				<style> .site-title, .site-description{display: none;}</style>
+						
+				<?php	}?>
+			</div>	
 		</div><!-- /brand -->
 		
 		<div class="clear"></div>
-	</div><!--/container -->
+	</div>
+	
+	
+	<div class="container menu">
+		<nav class="site-navigation main-navigation">
+			<?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+		</nav>
+	</div>
 		
 </header><!-- #masthead .site-header -->
 

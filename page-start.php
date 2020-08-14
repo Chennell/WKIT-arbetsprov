@@ -1,6 +1,6 @@
 <?php 
 /**
- * 	Template Name: Sidebar/Home Page
+ * 	Template Name: Startsida
  *
  *	This page template has a sidebar built into it, 
  * 	and can be used as a home page, in which case the title will not show up.
@@ -9,6 +9,8 @@
 get_header(); // This fxn gets the header.php file and renders it ?>
 	<div id="primary" class="row-fluid">
 		<div id="content" role="main" class="span8">
+			
+			<!-- Getting the hero img--->
 			<?php if ( get_header_image() ) : ?>
 				<div id="site-header">
 					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
@@ -54,8 +56,5 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 
 			<?php endif; // OK, I think that takes care of both scenarios (having a page or not having a page to show) ?>
 		</div><!-- #content .site-content -->
-		<div id="sidebar" role="sidebar" class="span4">
-			<?php get_sidebar(); // This will display whatever we have written in the sidebar.php file, according to admin widget settings ?>
-		</div><!-- #sidebar -->
 	</div><!-- #primary .content-area -->
 <?php get_footer(); // This fxn gets the footer.php file and renders it ?>
