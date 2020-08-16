@@ -24,6 +24,18 @@ p, ul, li a{
 	color: #5a5a5a;
 }
 
+body{
+	overflow-x: hidden;
+}
+
+img{
+	width: 100%;
+	height: auto;
+}
+
+a:hover{
+	color: #60a3bc !important;
+}
 
 
 
@@ -45,12 +57,84 @@ p, ul, li a{
 	height: auto;
 }
 
-
 .menu{
 	position: absolute;
 	bottom: 1.5em;
 	right: 0;
 }
+
+nav a{
+	font-size: 0.9em;
+}
+
+
+/******Hero section styling*******/
+
+#site-header {
+    margin: 0 -20px;
+	/*max-width: 100%;
+	height: auto;*/
+	position: relative;
+}
+
+.on-hero{
+	position: absolute;
+	padding: 1em;
+	top: 0;
+	width: 100%;
+}
+
+.on-hero-img{
+	width: 30%;
+	display: inline-block;
+}
+
+.on-hero-text{
+	float: right;
+	width: 50%;
+	margin: 0 2em;
+}
+
+.on-hero-text h2{
+	line-height: 1em;
+	font-size: 2em;
+}
+
+
+
+/************Media  query  styling******************/
+@media only screen and (min-width: 460px){
+	.on-hero{
+		padding: 2em;
+	}
+	.on-hero-text{
+		margin: 2em 3em 0 0;
+	}
+	
+	.on-hero-text h2{
+		line-height: 1em;
+		font-size: 3em;
+	}
+}
+
+@media only screen and (min-width: 600px){
+	
+	nav li a:hover::after {
+    width: 100%;
+}
+	
+	nav li a::after {
+    content: '';
+    display: block;
+    width: 0%;
+    height: 1px;
+    background: #60a3bc;
+    transition: width .3s;
+    margin-top: -4px;
+	
+}
+
+
 
 @media only screen and (min-width: 750px) {
 	.logo-box{

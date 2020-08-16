@@ -8,18 +8,34 @@
 */
 get_header(); // This fxn gets the header.php file and renders it ?>
 	<div id="primary" class="row-fluid">
-		<div id="content" role="main" class="span8">
+		<div id="content" role="main" classe="span8">
 			
 			<!-- Getting the hero img--->
 			<?php if ( get_header_image() ) : ?>
 				<div id="site-header">
-					<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 						<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
-					</a>
+					<div class="on-hero">
+						<div class="on-hero-img">
+							<?php get_the_post_thumbnail();
+								echo the_post_thumbnail('hero_thumbnail');?>
+						</div>
+						<div class="on-hero-text">
+							<?php $hero_rubrik = get_field('hero_rubrik');
+							echo "<h2> $hero_rubrik </h2>";?>
+							
+							<?php $hero_forfattare = get_field( "hero_forfattare" );
+								if( $hero_forfattare ) {
+									echo "<p>&#8212 $hero_forfattare</p>";
+								} else {
+									
+								}?>
+						</div>
+					</div>
 				</div>
 			<?php endif; ?>
 			
 			<?php if ( have_posts() ) : 
+	
 			// Do we have any posts/pages in the databse that match our query?
 			?>
 

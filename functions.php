@@ -37,13 +37,29 @@ add_action( 'after_setup_theme', 'WKIT_custom_logo_setup' );
 
 
 
+
+function theme_support(){
+		
+		//add_theme_support( 'post-thumbnails' ); 
+		//add_theme_support( 'post-formats' );
+		//add_theme_support('title-tag');
+
+		//The images
+		add_image_size( 'hero_thumbnail', 480, 480, true);
+		
+	}
+
+	 add_action( 'after_setup_theme', 'theme_support' );
+
+
+
 /*-----------------------------------------------------------------------------------*/
 /* Add hero img
 /*-----------------------------------------------------------------------------------*/
 
 $header_info = array(
-    'width'         => 980,
-    'height'        => 200,
+    'width'         => 1400,
+    'height'        => 500,
     'default-image' => get_template_directory_uri() . '/img/blue.jpg',
 );
 add_theme_support( 'custom-header', $header_info );
