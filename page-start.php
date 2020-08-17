@@ -16,8 +16,12 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 						<img src="<?php header_image(); ?>" width="<?php echo absint( get_custom_header()->width ); ?>" height="<?php echo absint( get_custom_header()->height ); ?>" alt="<?php echo esc_attr( get_bloginfo( 'name', 'display' ) ); ?>">
 					<div class="on-hero">
 						<div class="on-hero-img">
-							<?php get_the_post_thumbnail();
-								echo the_post_thumbnail('hero_thumbnail');?>
+							<?php 
+								$image = get_field('hero_bild');
+								$size = 'hero_thumbnil'; // (thumbnail, medium, large, full or custom size)
+								if( $image ) {
+									echo wp_get_attachment_image( $image, $size );
+								}?>
 						</div>
 						<div class="on-hero-text">
 							<?php $hero_rubrik = get_field('hero_rubrik');
@@ -52,13 +56,54 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 						<?php endif; ?>
 										
 						<div class="the-content">
-							<?php the_content(); 
-							// This call the main content of the page, the stuff in the main text box while composing.
-							// This will wrap everything in paragraph tags
+							<div class="start-section">
+								<?php the_content();
+									$start_link = get_field('start_sektion_lank');
+									$lank_rubrik = get_field('lank_rubrik');
+									echo "<a href=$start_link> &#8212 $lank_rubrik</a>";
+								?>
+							</div>
+							<div class="start-section-img">
+								<?php get_the_post_thumbnail();
+									echo the_post_thumbnail('hero_thumbnail');?>
+							</div>
+						</div><!-- the-content -->
+						
+						<!-- Visar de tre senast  upplaggda böckerna -->
+						<div class="book-section">
+							
+							<?php $sektion_2_rubrik = get_field('sektion_2_rubrik');
+								echo "<h2> $sektion_2_rubrik </h2>";
 							?>
 							
-							<?php wp_link_pages(); // This will display pagination links, if applicable to the page ?>
-						</div><!-- the-content -->
+							<div class="book-grid">
+								<?php 
+								   // the query
+								   $the_books = new WP_Query( array(
+									  'posts_per_page' => 3,
+								   )); 
+								?>
+
+								<?php if ( $the_books->have_posts() ) :
+								   while ( $the_books->have_posts() ) : $the_books->the_post();?>
+									<div class="a-book">
+										<a href="<?php the_permalink()?>">
+
+											<?php the_post_thumbnail('hero_thumbnail');?>
+											<h3><?php the_title();?></h3>
+											<?php $forfattare = get_field('forfattare');?>
+											<p> &#8212 <?php echo $forfattare?></p>
+										</a>
+									</div>
+
+								   <?php endwhile;
+								   wp_reset_postdata();
+
+								 else : ?>
+								  <p><?php __('No News'); ?></p>
+								<?php endif; ?>
+							</div>
+						</div>
 						
 					</article>
 

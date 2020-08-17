@@ -63,9 +63,14 @@ a:hover{
 	right: 0;
 }
 
+header nav ul li{
+	display: inline-block;
+}
+
 nav a{
 	font-size: 0.9em;
 }
+
 
 
 /******Hero section styling*******/
@@ -102,6 +107,55 @@ nav a{
 
 
 
+/***********Start sida**********/
+
+div.the-content{
+	margin: 4em auto !important;
+	display: grid;
+}
+
+.start-section a{
+	font-size: 1.2em;
+	font-family: 'Roboto', sans-serif;
+}
+
+.book-section{
+	background-color: #eeeeee;
+	margin: 0 -9999rem;
+  	padding: 8em 9999rem;
+}
+
+
+
+.book-section h2{
+	font-size: 2em;
+    text-align: center;
+    line-height: 1.1em;
+    margin: 0 auto 1em auto;
+    border-bottom: 1px solid;
+    display: table;
+}
+
+.book-grid{
+	display: grid;
+	grid-gap: 4em;
+	padding: 1em 3em;
+}
+
+.a-book h3{
+	font-family: 'Roboto', sans-serif !important;
+	font-size: 1.5em;
+	line-height: 1;
+    margin-top: 0.5em;
+}
+
+.a-book p{
+	font-size: 0.9em;
+	color: #8a8a8a;
+}
+
+
+
 /************Media  query  styling******************/
 @media only screen and (min-width: 460px){
 	.on-hero{
@@ -120,18 +174,38 @@ nav a{
 @media only screen and (min-width: 600px){
 	
 	nav li a:hover::after {
-    width: 100%;
-}
+		width: 100%;
+	}
 	
 	nav li a::after {
-    content: '';
-    display: block;
-    width: 0%;
-    height: 1px;
-    background: #60a3bc;
-    transition: width .3s;
-    margin-top: -4px;
+		content: '';
+		display: block;
+		width: 0%;
+		height: 1px;
+		background: #60a3bc;
+		transition: width .3s;
+		margin-top: -4px;
+	}
+}
 	
+	
+	/*******start styling*********/
+	div.the-content{
+		grid-template-columns: 49% 49%;
+    	grid-gap: 2%;
+	}
+	
+	
+	@media only screen and (min-width: 700px) {
+	
+	.book-grid{
+		grid-template-columns: auto auto auto;
+		padding: 1em 0;
+	}
+		
+	.a-book h3{
+		font-size: 1.1em;
+	}
 }
 
 
@@ -140,5 +214,8 @@ nav a{
 	.logo-box{
 		width: 20%;
 	}
+	
+	.book-grid{
+		grid-template-columns: auto auto auto;
+	}
 }
-

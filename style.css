@@ -548,18 +548,7 @@ article .post-meta a {
 article .post-meta a:hover {
   color: rgba(136, 136, 136, 0.5);
 }
-article .the-content a {
-  font-weight: 900;
-  text-decoration: none;
-}
-/*article .the-content p {
-  color: #191919;
-  text-align: justify;
-}*/
-article .the-content img {
-  width: 100%;
-  height: auto;
-}
+
 article .meta {
   line-height: 14.8px;
   font-size: 10px;
