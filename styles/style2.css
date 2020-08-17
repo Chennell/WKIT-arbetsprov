@@ -125,8 +125,6 @@ div.the-content{
   	padding: 8em 9999rem;
 }
 
-
-
 .book-section h2{
 	font-size: 2em;
     text-align: center;
@@ -140,6 +138,15 @@ div.the-content{
 	display: grid;
 	grid-gap: 4em;
 	padding: 1em 3em;
+}
+
+.a-book a{
+	opacity: 1;
+	transition: opacity .3s;
+}
+
+.a-book a:hover{
+	opacity: 0.8;
 }
 
 .a-book h3{
@@ -156,6 +163,47 @@ div.the-content{
 
 
 
+
+/************************Styling of footer*************/
+footer{
+	background-color: #60a3bc;
+	margin: 0 -9999rem;
+  	padding: 8em 9999rem;
+}
+
+.site-footer{
+	display: grid;
+	grid-gap: 2em;
+	padding: 2em;
+
+}
+
+.footer-box {
+    padding: 4em;
+}
+
+.footer-box h1, .footer-box h2, .footer-box h3, .footer-box h4, .footer-box h5, .footer-box h6{
+	color: #5a5a5a;
+	font-family: 'Roboto', sans-serif !important;
+	margin-bottom:0.3em;
+}
+
+.footer-box a, .footer-box p{
+	color: #ffffff;
+	margin-bottom: 0.5em;
+}
+
+.footer-box a:hover{
+	color: #82ccdd !important;
+}
+
+.footer-box ul{
+	list-style: none;
+	margin: 0;
+}
+
+
+
 /************Media  query  styling******************/
 @media only screen and (min-width: 460px){
 	.on-hero{
@@ -168,6 +216,15 @@ div.the-content{
 	.on-hero-text h2{
 		line-height: 1em;
 		font-size: 3em;
+	}
+	
+	
+	/*******Footer*******/
+	.site-footer{
+		grid-template-columns: 48% 48%;
+		grid-gap: 4%;
+		padding: 2em 3em;
+		text-align: left;
 	}
 }
 

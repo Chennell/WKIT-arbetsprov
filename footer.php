@@ -8,9 +8,12 @@
 </main><!-- / end page container, begun in the header -->
 
 <footer class="site-footer">
-	
-	 <?php dynamic_sidebar( 'footer_area_one' ); ?>
-	 <?php dynamic_sidebar( 'footer_area_two' ); ?>
+	<div class="footer-box">	
+		 <?php dynamic_sidebar( 'footer_area_one' ); ?>
+	</div>
+	<div class="footer-box">	
+	 	<?php dynamic_sidebar( 'footer_area_two' ); ?>
+	</div>
 </footer><!-- #colophon .site-footer -->
 
 <?php wp_footer(); 

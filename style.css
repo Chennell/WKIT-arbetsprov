@@ -516,7 +516,7 @@ header nav ul li a {
 article {
   background: transparent;
   padding: 0;
-  margin-bottom: 80px;
+  /*margin-bottom: 80px;*/
   border-bottom: 1px solid #dddddd;
 }
 article .title {
