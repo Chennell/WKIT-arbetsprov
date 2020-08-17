@@ -6,7 +6,7 @@
 
 get_header(); // This fxn gets the header.php file and renders it ?>
 	<div id="primary" class="row-fluid">
-		<div id="content" role="main" class="span8 offset2">
+		<div id="content" role="main" class="content">
 
 			<?php if ( have_posts() ) : 
 			// Do we have any posts in the databse that match our query?
@@ -23,12 +23,13 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 									echo the_post_thumbnail('hero_thumbnail');?>
 							</div>
 							<div class="single-book-info">
-
-								<h1 class="title"><?php the_title(); ?></h1>
-								<?php $forfattare = get_field('forfattare');?>
-								<p> &#8212 <?php echo $forfattare?></p>
+								<div class="single-book-title-box">
+									<h1 class="title"><?php the_title(); ?></h1>
+									<?php $forfattare = get_field('forfattare');?>
+									<p> &#8212 <?php echo $forfattare?></p>
+								</div>
 								
-								<div class="the-content">
+								<div class="single-content">
 									<?php the_content(); 
 									// This call the main content of the post, the stuff in the main text box while composing.
 									// This will wrap everything in p tags
@@ -44,22 +45,18 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 										$isbn = get_field('isbn');
 										$bokens_sprak = get_field('bokens_sprak');
 									?>
-									<p> Författare: <?php echo $forfattare?></p>
-									<p> Utgivet år: <?php echo $utgivet_ar?></p>
-									<p> Sidor: <?php echo $antal_sidor?></p>
-									<p> ISBN <?php echo $isbn?></p>
-									<p> Språk <?php echo $bokens_sprak?></p>
-							
-
-
-
+									<p><strong>Författare:</strong> <?php echo $forfattare?></p>
+									<p><strong>Utgivet år: </strong><?php echo $utgivet_ar?></p>
+									<p><strong>Sidor: </strong><?php echo $antal_sidor?></p>
+									<p><strong>ISBN: </strong><?php echo $isbn?></p>
+									<p><strong>Språk: </strong><?php echo $bokens_sprak?></p>
 								</div>
 							</div>
 						</div>
 						
 						<div class="meta clearfix">
-							<div class="category"><?php echo get_the_category_list(); // Display the categories this post belongs to, as links ?></div>
-							<div class="tags"><?php echo get_the_tag_list( '| &nbsp;', '&nbsp;' ); // Display the tags this post has, as links separated by spaces and pipes ?></div>
+							<div class="category"><?php //echo get_the_category_list(); // Display the categories this post belongs to, as links ?></div>
+							<div class="tags"><?php //echo get_the_tag_list( '| &nbsp;', '&nbsp;' ); // Display the tags this post has, as links separated by spaces and pipes ?></div>
 						</div><!-- Meta -->
 						
 						

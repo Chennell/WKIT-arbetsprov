@@ -68,7 +68,7 @@ header nav ul li{
 }
 
 nav a{
-	font-size: 0.9em;
+	font-size: 1.4em;
 }
 
 
@@ -163,6 +163,46 @@ div.the-content{
 
 
 
+/************************Styling of single-poster page*************/
+
+.the_book{
+	display: grid;
+	margin: 6em 0;
+}
+
+.the_book p{
+	font-size: 1.3em;
+}
+
+.single-book-img{
+	width: 60%;
+	margin: 0 auto;
+}
+.single-book-title-box{
+	text-align: center;
+}
+
+.single-content{
+	margin: 0 0 2em 0;
+}
+
+.book-info {
+    background-color: #82ccdd;
+    padding: 2em 1em;
+}
+
+.book-info p {
+    color: #ffffff;
+    font-size: 1.4em;
+    margin-bottom: 1em;
+}
+
+.book-info p:last-child{
+	margin-bottom: 0;
+}
+
+
+
 
 /************************Styling of footer*************/
 footer{
@@ -175,7 +215,6 @@ footer{
 	display: grid;
 	grid-gap: 2em;
 	padding: 2em;
-
 }
 
 .footer-box {
@@ -243,14 +282,24 @@ footer{
 		transition: width .3s;
 		margin-top: -4px;
 	}
+	
+		/*******start styling*********/
+	div.the-content, .the_book{
+		grid-template-columns: 48% 48%;
+    	grid-gap: 4%;
+	}
+	
+	.the_book{
+		margin: 6em 0 14em 0;
+	}
+	
+	.single-book-img{
+		width: 100%;
+	}
 }
 	
 	
-	/*******start styling*********/
-	div.the-content{
-		grid-template-columns: 49% 49%;
-    	grid-gap: 2%;
-	}
+
 	
 	
 	@media only screen and (min-width: 700px) {
@@ -274,5 +323,9 @@ footer{
 	
 	.book-grid{
 		grid-template-columns: auto auto auto;
+	}
+	
+	.single-content p {
+		font-size: 1.3em;
 	}
 }
