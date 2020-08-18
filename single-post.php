@@ -14,6 +14,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 
 				<?php while ( have_posts() ) : the_post(); 
 				// If we have a post to show, start a loop that will display it
+					setPostViews(get_the_ID());
 				?>
 
 					<article class="post">
@@ -30,7 +31,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 								</div>
 								
 								<div class="single-content">
-									<?php the_content(); 
+									<?php the_content('Read on...'); 
 									// This call the main content of the post, the stuff in the main text box while composing.
 									// This will wrap everything in p tags
 									?>

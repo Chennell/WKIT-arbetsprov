@@ -95,7 +95,7 @@ register_nav_menus(
 );
 
 /*-----------------------------------------------------------------------------------*/
-/* Activate sidebar for Wordpress use
+/* Add sidebar and  footer  widgets
 /*-----------------------------------------------------------------------------------*/
 function naked_register_sidebars() {
 	register_sidebar(array(				// Start a series of sidebars to register
@@ -134,6 +134,22 @@ function naked_register_sidebars() {
 // adding sidebars to Wordpress (these are created in functions.php)
 add_action( 'widgets_init', 'naked_register_sidebars' );
 
+
+
+
+
+function setPostViews($postID) {
+    $countKey = 'post_views_count';
+    $count = get_post_meta($postID, $countKey, true);
+    if($count==''){
+        $count = 0;
+        delete_post_meta($postID, $countKey);
+        add_post_meta($postID, $countKey, '0');
+    }else{
+        $count++;
+        update_post_meta($postID, $countKey, $count);
+    }
+}
 
 
 /*-----------------------------------------------------------------------------------*/

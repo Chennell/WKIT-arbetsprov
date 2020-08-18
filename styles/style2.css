@@ -125,7 +125,7 @@ div.the-content{
   	padding: 8em 9999rem;
 }
 
-.book-section h2{
+.book-section h2, .top-list-section h2{
 	font-size: 2em;
     text-align: center;
     line-height: 1.1em;
@@ -140,13 +140,13 @@ div.the-content{
 	padding: 1em 3em;
 }
 
-.a-book a{
+.a-book a, .a-book a img{
 	opacity: 1;
 	transition: opacity .3s;
 }
 
-.a-book a:hover{
-	opacity: 0.8;
+.a-book a:hover, .a-book a:hover img {
+	opacity: 0.6;
 }
 
 .a-book h3{
@@ -157,8 +157,42 @@ div.the-content{
 }
 
 .a-book p{
-	font-size: 0.9em;
+	font-size: 1em;
 	color: #8a8a8a;
+}
+
+
+/*********************Styling of all books page********************/
+.all-books{
+	background-color: transparent;
+	padding-top: 3em;
+}
+
+.all-books h2, .top-list-section h2{
+	margin-bottom: 2em;
+}
+
+
+
+/*************************styling of topplistan******************/
+.top-list-section {
+	padding-top: 3em;
+	margin: 0 0 13em 0;
+}
+
+.top-list-grid {
+    display: grid;
+    grid-gap: 5em;
+}
+
+.top-list-innerdiv{
+	display: grid;
+	grid-gap: 2em;
+}
+
+.top-list-innerdiv-img {
+    width: 60%;
+    margin: 0 auto;
 }
 
 
@@ -201,6 +235,80 @@ div.the-content{
 	margin-bottom: 0;
 }
 
+
+
+
+/**********************Styling of Kontakt*****************/
+.form {
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.form-btn, .wpforms-form button[type=submit]{
+	border: 1px solid #60a3bc !important;
+    padding: 1em 2em !important;
+    font-size: 1.2em !important;
+    background-color: #60a3bc !important;
+    transition: background 0.3s;
+    color: #ffffff !important;
+    border-radius: 3px !important;
+}
+
+.form-btn:hover, .wpforms-form button[type=submit]:hover{
+	background-color: transparent !important;
+	color: #60a3bc !important;
+}
+
+
+/*************************styling of 404*******************/
+.error-box{
+	text-align: center;
+    margin: 0 auto;
+    margin-bottom: 10em;
+}
+
+.error-text-box{
+	margin: 0 0 10em 0;
+}
+
+p.error-text {
+    font-size: 20em !important;
+    color: #b1cfde;
+    margin-bottom: 0;
+	line-height: 1;
+}
+
+.error-text-box a{
+	/*border: solid 1px #82ccdd;
+	padding: 1em 2em;*/
+	font-size: 1.5em;
+}
+
+.error-btn {
+    display: inline-block;
+    margin-right: 3em;
+}
+
+.error-btn:nth-last-child {
+    margin-right: 0em;
+}
+
+.error-btn p {
+    border: 1px solid #60a3bc;
+    padding: 0.5em 1.5em;
+    font-size: 1.2em !important;
+    background-color: #60a3bc;
+    transition: background 0.3s;
+	color: #ffffff;
+	border-radius: 3px;
+}
+
+.error-btn p:hover{
+	background-color: transparent;
+	color: #60a3bc;
+	
+}
 
 
 
@@ -257,6 +365,10 @@ footer{
 		font-size: 3em;
 	}
 	
+	.book-grid.all-books-grid{
+		grid-template-columns: auto auto;
+		grid-gap: 2em;
+	}
 	
 	/*******Footer*******/
 	.site-footer{
@@ -264,6 +376,17 @@ footer{
 		grid-gap: 4%;
 		padding: 2em 3em;
 		text-align: left;
+	}
+}
+
+
+@media only screen and (min-width: 479px){
+	p, ul, li a{
+		/*font-size: 1.4em !important;*/
+	}
+
+	.start-section a{
+		font-size: 1.6em;
 	}
 }
 
@@ -280,10 +403,19 @@ footer{
 		height: 1px;
 		background: #60a3bc;
 		transition: width .3s;
-		margin-top: -4px;
+		margin-top: 0px;
 	}
 	
 		/*******start styling*********/
+	
+	.on-hero-text h2{
+		font-size: 4em;
+	}
+	
+	.on-hero-text p{
+		font-size: 1.5em;
+	}
+	
 	div.the-content, .the_book{
 		grid-template-columns: 48% 48%;
     	grid-gap: 4%;
@@ -297,12 +429,26 @@ footer{
 		width: 100%;
 	}
 }
+
+@media only screen and (min-width: 640px){
+	.book-grid.all-books-grid{
+		grid-template-columns: auto auto auto;
+	}
 	
+	.top-list-innerdiv{
+		grid-template-columns: auto auto;
+	}
+	.top-list-innerdiv-img {
+		width: 100%;
+	}
+	
+	.error-box{
+		width: 70%;
+	}
+}
 	
 
-	
-	
-	@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) {
 	
 	.book-grid{
 		grid-template-columns: auto auto auto;
@@ -310,7 +456,7 @@ footer{
 	}
 		
 	.a-book h3{
-		font-size: 1.1em;
+		font-size: 1.6em;
 	}
 }
 
@@ -321,11 +467,38 @@ footer{
 		width: 20%;
 	}
 	
+	.on-hero-text{
+		margin: 6em 3 0 0;
+	}
+	
+	.on-hero-text h2{
+		font-size: 5em;
+	}
+	
+	.on-hero-text p{
+		font-size: 2em;
+		margin-top: 1em;
+	}
+	
 	.book-grid{
 		grid-template-columns: auto auto auto;
 	}
 	
+	.book-grid.all-books-grid{
+		grid-template-columns: auto auto auto auto;
+	}
+	
 	.single-content p {
 		font-size: 1.3em;
+	}
+}
+
+@media only screen and (min-width: 1000px) {
+	.on-hero-text {
+		margin: 6em 3em 0 0;
+	}
+	
+	.on-hero-text h2{
+		font-size: 6em;
 	}
 }
