@@ -72,9 +72,9 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 						<!-- Visar de tre senast  upplaggda böckerna -->
 						<div class="book-section">
 							<div class="book-section-in-div">
-								<?php $sektion_2_rubrik = get_field('sektion_2_rubrik');
-									echo "<h2> $sektion_2_rubrik </h2>";
-								?>
+								<?php $sektion_2_rubrik = get_field('sektion_2_rubrik');?>
+									 <h2 class="news-section"> <?php echo $sektion_2_rubrik ?> </h2>
+								
 								<div class="book-grid">
 									<?php 
 									   // the query

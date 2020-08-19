@@ -21,7 +21,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 
 					<article class="post">
 						
-						<h2 class='title'>
+						<h2 class='title  kontakt-title'>
 							<?php the_title(); // Display the page title ?>
 						</h2>
 										

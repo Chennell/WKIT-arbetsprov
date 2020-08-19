@@ -22,23 +22,24 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 					<article class="post">
 						
 						<!-- Visar alla  upplagda böcker -->
-						<div class="book-section all-books">
+						<div class="all-books">
 							
 							<h2>
 								<?php the_title(); // Display the page title ?>
 							</h2>
 							
-							<div class="book-grid all-books-grid">
+							<div class="all-books-grid">
 								<?php 
 								   // the query
 								   $the_books = new WP_Query( array(
 									  'posts_per_page' => -1,
+									   'post_type'        => 'post'
 								   )); 
 								?>
 
 								<?php if ( $the_books->have_posts() ) :
 								   while ( $the_books->have_posts() ) : $the_books->the_post();?>
-									<div class="a-book">
+									<div class="a-book all-single-book">
 										<a href="<?php the_permalink()?>">
 
 											<?php the_post_thumbnail('hero_thumbnail');?>

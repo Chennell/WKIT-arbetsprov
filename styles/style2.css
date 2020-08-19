@@ -158,13 +158,18 @@ div.the-content{
 	margin: 0  auto;
 }
 
-.book-section h2, .top-list-section h2{
-	font-size: 2em;
+.book-section h2, .all-books h2, .top-list-section h2, .kontakt-title{
+	font-size: 3.2em !important;
     text-align: center;
-    line-height: 1.1em;
+    line-height: 1.2em !important;
     margin: 0 auto 1em auto;
     border-bottom: 1px solid;
     display: table;
+	color: #60a3bc !important;
+}
+
+h2.news-section {
+    font-size: 2em !important;
 }
 
 .book-grid{
@@ -189,9 +194,10 @@ div.the-content{
     margin: 0.5em 0 0.3em 0;
 }
 
-.a-book p{
+.a-book p, .start-section p, .first-section p{
 	font-size: 1.3em;
-	color: #8a8a8a;
+	color: #5a5a5a;
+	
 }
 
 
@@ -204,10 +210,15 @@ div.the-content{
 
 .all-books-grid{
 	display: grid;
-    grid-gap: 4%;
+    column-gap: 4%;
     padding: 0;
     grid-template-columns: 48% 48%;
 }
+
+.all-single-book{
+	margin-bottom: 4%;
+}
+
 .all-books-grid .a-book h3{
 	font-size: 1.3em;
 }
@@ -495,9 +506,9 @@ footer{
 }
 
 @media only screen and (min-width: 640px){
-	.book-grid.all-books-grid{
-		grid-template-columns: 31% 31% 31%;
-		grid-gap: 3.5%;
+	.all-books-grid{
+		grid-template-columns: 30% 30% 30%;
+		grid-column-gap: 5%;
 	}
 	
 	.top-list-innerdiv{
@@ -555,9 +566,11 @@ footer{
 		font-size: 1.5em;
 	}
 	
-	.book-grid.all-books-grid{
+	.all-books-grid{
 		grid-template-columns: 20% 20% 20% 20%;
-    	grid-gap: 6.5% !important;
+    	grid-column-gap: 6.5%;
+		max-width: 1000px;
+    	margin: 0 auto;
 	}
 	
 	.single-content p {
