@@ -45,7 +45,8 @@ function theme_support(){
 		//add_theme_support('title-tag');
 
 		//The images
-		add_image_size( 'hero_thumbnail', 480, 480, true);
+		add_image_size( 'book_img', 150, 200, false);
+		add_image_size( 'ver-img', 250, 170, false);
 		
 	}
 

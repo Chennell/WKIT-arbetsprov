@@ -40,7 +40,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 											<a href="<?php the_permalink()?>">
 												<div class="top-list-innerdiv">
 													<div class="top-list-innerdiv-img">
-														<?php the_post_thumbnail('hero_thumbnail');?>
+														<?php the_post_thumbnail('book_img');?>
 													</div>
 													<div class="top-list-innerdiv-text">
 														<h3><?php echo $number,'. ', the_title();?></h3>

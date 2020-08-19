@@ -5,7 +5,7 @@
  */
 
 get_header(); // This fxn gets the header.php file and renders it ?>
-	<div id="primary" class="row-fluid">
+	<div id="primary" class="row-fluid overflow">
 		<div id="content" role="main" class="content">
 
 			<?php if ( have_posts() ) : 
@@ -21,7 +21,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 						<div class="the_book">
 							<div class="single-book-img">
 								<?php get_the_post_thumbnail();
-									echo the_post_thumbnail('hero_thumbnail');?>
+									echo the_post_thumbnail('book_img');?>
 							</div>
 							<div class="single-book-info">
 								<div class="single-book-title-box">
@@ -66,37 +66,38 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 						
 						<!-- Visar de tre senast  upplaggda böckerna -->
 						<div class="book-section">
+							<div class="book-section-in-div">
 							
 							<?php $sektion_2_rubrik = get_field('sektion_2_rubrik');
 								echo "<h2> $sektion_2_rubrik </h2>";
 							?>
-							
-							<div class="book-grid">
-								<?php 
-								   // the query
-								   $the_books = new WP_Query( array(
-									  'posts_per_page' => 3,
-								   )); 
-								?>
+								<div class="book-grid">
+									<?php 
+									   // the query
+									   $the_books = new WP_Query( array(
+										  'posts_per_page' => 3,
+									   )); 
+									?>
 
-								<?php if ( $the_books->have_posts() ) :
-								   while ( $the_books->have_posts() ) : $the_books->the_post();?>
-									<div class="a-book">
-										<a href="<?php the_permalink()?>">
+									<?php if ( $the_books->have_posts() ) :
+									   while ( $the_books->have_posts() ) : $the_books->the_post();?>
+										<div class="a-book">
+											<a href="<?php the_permalink()?>">
 
-											<?php the_post_thumbnail('hero_thumbnail');?>
-											<h3><?php the_title();?></h3>
-											<?php $forfattare = get_field('forfattare');?>
-											<p> &#8212 <?php echo $forfattare?></p>
-										</a>
-									</div>
+												<?php the_post_thumbnail('book_img');?>
+												<h3><?php the_title();?></h3>
+												<?php $forfattare = get_field('forfattare');?>
+												<p> &#8212 <?php echo $forfattare?></p>
+											</a>
+										</div>
 
-								   <?php endwhile;
-								   wp_reset_postdata();
+									   <?php endwhile;
+									   wp_reset_postdata();
 
-								 else : ?>
-								  <p><?php __('No News'); ?></p>
-								<?php endif; ?>
+									 else : ?>
+									  <p><?php __('No News'); ?></p>
+									<?php endif; ?>
+								</div>
 							</div>
 						</div>
 						

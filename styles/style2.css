@@ -24,14 +24,33 @@ p, ul, li a{
 	color: #5a5a5a;
 }
 
-body{
+p{
+	/*font-size: 1em !important;*/
+}
+
+.main-fluid{
+	max-width: 1400px;
+	padding: 0;
+}
+.overflow{
+	/*overflow-x: hidden;*/
 	overflow-x: hidden;
+}
+.row-fluid{
+	/*padding: 0 20px;*/
+	
+}
+
+#content{
+	padding: 0 20px;
 }
 
 img{
 	width: 100%;
 	height: auto;
 }
+
+
 
 a:hover{
 	color: #60a3bc !important;
@@ -41,7 +60,7 @@ a:hover{
 
 /****************Styling av header**************/
 #masthead{
-	max-width: 1366px;
+	max-width: 1400px;
 	min-width: 320px;
 	width: 95%;
 	position: relative;
@@ -86,17 +105,18 @@ nav a{
 	position: absolute;
 	padding: 1em;
 	top: 0;
+	left: 3%;
 	width: 100%;
+	display: grid;
+    grid-template-columns: 40% 50%;
 }
 
 .on-hero-img{
-	width: 30%;
-	display: inline-block;
+	width: 50%;
 }
 
 .on-hero-text{
 	float: right;
-	width: 50%;
 	margin: 0 2em;
 }
 
@@ -110,8 +130,12 @@ nav a{
 /***********Start sida**********/
 
 div.the-content{
-	margin: 4em auto !important;
+	margin: 6em 2em 8em !important;
 	display: grid;
+}
+
+.start-section p {
+    font-size: 1.5em;
 }
 
 .start-section a{
@@ -119,10 +143,19 @@ div.the-content{
 	font-family: 'Roboto', sans-serif;
 }
 
+.start-section-img{
+	margin-top: 2em;
+}
+
 .book-section{
 	background-color: #eeeeee;
 	margin: 0 -9999rem;
   	padding: 8em 9999rem;
+}
+
+.book-section-in-div{
+	width:  60%;
+	margin: 0  auto;
 }
 
 .book-section h2, .top-list-section h2{
@@ -153,11 +186,11 @@ div.the-content{
 	font-family: 'Roboto', sans-serif !important;
 	font-size: 1.5em;
 	line-height: 1;
-    margin-top: 0.5em;
+    margin: 0.5em 0 0.3em 0;
 }
 
 .a-book p{
-	font-size: 1em;
+	font-size: 1.3em;
 	color: #8a8a8a;
 }
 
@@ -166,7 +199,23 @@ div.the-content{
 .all-books{
 	background-color: transparent;
 	padding-top: 3em;
+	margin-bottom: 8em;
 }
+
+.all-books-grid{
+	display: grid;
+    grid-gap: 4%;
+    padding: 0;
+    grid-template-columns: 48% 48%;
+}
+.all-books-grid .a-book h3{
+	font-size: 1.3em;
+}
+.all-books-grid .a-book p{
+	font-size: 1.1em;
+}
+
+
 
 .all-books h2, .top-list-section h2{
 	margin-bottom: 2em;
@@ -197,7 +246,7 @@ div.the-content{
 
 
 
-/************************Styling of single-poster page*************/
+/************************Styling of single-post page*************/
 
 .the_book{
 	display: grid;
@@ -209,7 +258,7 @@ div.the-content{
 }
 
 .single-book-img{
-	width: 60%;
+	width: 50%;
 	margin: 0 auto;
 }
 .single-book-title-box{
@@ -365,9 +414,11 @@ footer{
 		font-size: 3em;
 	}
 	
-	.book-grid.all-books-grid{
-		grid-template-columns: auto auto;
-		grid-gap: 2em;
+	.all-books-grid .a-book h3{
+		font-size: 1.5em;
+	}
+	.all-books-grid .a-book p{
+		font-size: 1.2em;
 	}
 	
 	/*******Footer*******/
@@ -417,26 +468,41 @@ footer{
 	}
 	
 	div.the-content, .the_book{
-		grid-template-columns: 48% 48%;
+		grid-template-columns: 40% 56%;
     	grid-gap: 4%;
 	}
 	
+	.start-section-img{
+		margin-top: 0em;
+	}
+	
+	
+	/*Single page styling*/
 	.the_book{
 		margin: 6em 0 14em 0;
+		grid-template-columns: 35% 61%;
+    	grid-gap: 4%;
 	}
 	
 	.single-book-img{
 		width: 100%;
 	}
+	
+	.single-book-title-box h1{
+		font-size: 3em !important;
+		line-height: 1.2em !important;
+	}
 }
 
 @media only screen and (min-width: 640px){
 	.book-grid.all-books-grid{
-		grid-template-columns: auto auto auto;
+		grid-template-columns: 31% 31% 31%;
+		grid-gap: 3.5%;
 	}
 	
 	.top-list-innerdiv{
-		grid-template-columns: auto auto;
+		grid-template-columns: 40% 56%;
+		grid-gap: 4%;
 	}
 	.top-list-innerdiv-img {
 		width: 100%;
@@ -450,9 +516,14 @@ footer{
 
 @media only screen and (min-width: 700px) {
 	
+	.book-section-in-div{
+		width: 70%;
+	}
+	
 	.book-grid{
-		grid-template-columns: auto auto auto;
+		grid-template-columns: 30% 30% 30%;
 		padding: 1em 0;
+		grid-gap: 4.5%;
 	}
 		
 	.a-book h3{
@@ -480,16 +551,39 @@ footer{
 		margin-top: 1em;
 	}
 	
-	.book-grid{
-		grid-template-columns: auto auto auto;
+	.a-book p{
+		font-size: 1.5em;
 	}
 	
 	.book-grid.all-books-grid{
-		grid-template-columns: auto auto auto auto;
+		grid-template-columns: 20% 20% 20% 20%;
+    	grid-gap: 6.5% !important;
 	}
 	
 	.single-content p {
-		font-size: 1.3em;
+		font-size: 1.5em;
+		line-height: 1.4em;
+	}
+	
+	
+	/****Topplistan********/
+	.top-list-innerdiv{
+		grid-template-columns: 30% 64%;
+	}
+	
+	.top-list-innerdiv-img{
+		width: 80%;
+	}
+	/********Kontakt*******/
+	.first-section p {
+		font-size: 1.5em;
+	}
+}
+
+@media only screen and (min-width: 900px) {
+	.top-list-grid{
+		width: 80%;
+		margin: 0 auto;
 	}
 }
 
@@ -501,4 +595,25 @@ footer{
 	.on-hero-text h2{
 		font-size: 6em;
 	}
+	
+	/***Topplist styling******/
+	.top-list-grid{
+		width: 70%;
+	}
+	/*.top-list-innerdiv{
+		grid-template-columns: 30% 40%;
+	}
+	.top-list-innerdiv-img{
+		width: 50%;
+	}*/
+	
+	
+	/*****Single page styling******/
+	.the_book{
+		grid-template-columns: 30% 60%;
+    	grid-gap: 5%;
+		width: 80%;
+		margin: 6em auto;
+	}
+
 }
