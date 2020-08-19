@@ -32,7 +32,8 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 									<?php
 								
 										$number = 0;
-										query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC&post_per_page=10');
+										query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC&posts_per_page=-1');
+
 										if (have_posts()) : while (have_posts()) : the_post();
 											$number ++;
 										?>

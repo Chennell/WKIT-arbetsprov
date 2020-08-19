@@ -138,7 +138,7 @@ add_action( 'widgets_init', 'naked_register_sidebars' );
 
 
 
-
+/*Räknar hur många visningar en post har*/
 function setPostViews($postID) {
     $countKey = 'post_views_count';
     $count = get_post_meta($postID, $countKey, true);

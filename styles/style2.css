@@ -82,12 +82,17 @@ a:hover{
 	right: 0;
 }
 
+/*responsive menu*/
+#responsive-menu-wrapper{
+	margin-top: 30% !important;
+}
+
 header nav ul li{
 	display: inline-block;
 }
 
 nav a{
-	font-size: 1.4em;
+	font-size: 1.6em;
 }
 
 
@@ -333,7 +338,7 @@ h2.news-section {
 }
 
 p.error-text {
-    font-size: 20em !important;
+    font-size: 13em !important;
     color: #b1cfde;
     margin-bottom: 0;
 	line-height: 1;
