@@ -31,10 +31,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 								</div>
 								
 								<div class="single-content">
-									<?php the_content('Read on...'); 
-									// This call the main content of the post, the stuff in the main text box while composing.
-									// This will wrap everything in p tags
-									?>
+									<p><?php the_content(); ?></p>
 
 									<?php wp_link_pages(); // This will display pagination links, if applicable to the post ?>
 								</div><!-- the-content -->
@@ -51,6 +48,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 									<p><strong>Sidor: </strong><?php echo $antal_sidor?></p>
 									<p><strong>ISBN: </strong><?php echo $isbn?></p>
 									<p><strong>Språk: </strong><?php echo $bokens_sprak?></p>  
+									<p><strong>Antal visningar: </strong><?php echo getPostViews(get_the_ID()); ?></p> 
 									<p><strong>Genre:</strong><?php  
 										the_terms( $post->ID, 'genre' ,  ' ' );
 											?></p>

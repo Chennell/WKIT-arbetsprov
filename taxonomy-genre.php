@@ -1,4 +1,5 @@
 <?php 
+//Denna sida visar alla böcker med samma tag.
 get_header(); // This fxn gets the header.php file and renders it ?>
 	<div id="primary" class="row-fluid">
 		<div id="content" role="main" classe="span8">

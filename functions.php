@@ -76,9 +76,9 @@ $header_images = array(
             'description'   => 'Blue',
     ),
     'flower' => array(
-            'url'           => get_template_directory_uri() . '/img/books.jpg',
-            'thumbnail_url' => get_template_directory_uri() . '/img/books.jpg',
-            'description'   => 'books',
+            'url'           => get_template_directory_uri() . '/img/blue-second.jpg',
+            'thumbnail_url' => get_template_directory_uri() . '/img/blue-second.jpg',
+            'description'   => 'Blue 2',
     ),  
 );
 register_default_headers( $header_images );
@@ -140,7 +140,17 @@ function naked_register_sidebars() {
 add_action( 'widgets_init', 'naked_register_sidebars' );
 
 
-
+/*Visa en post visningar*/
+function getPostViews($postID){
+    $count_key = 'post_views_count';
+    $count = get_post_meta($postID, $count_key, true);
+    if($count==''){
+        delete_post_meta($postID, $count_key);
+        add_post_meta($postID, $count_key, '0');
+        return "0 View";
+    }
+    return $count;
+}
 
 /*Räknar hur många visningar en post har*/
 function setPostViews($postID) {
