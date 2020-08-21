@@ -80,6 +80,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 									   // the query
 									   $the_books = new WP_Query( array(
 										  'posts_per_page' => 3,
+										  'post_type'      => 'bok',
 									   )); 
 									?>
 

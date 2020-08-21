@@ -12,7 +12,7 @@
 					$booksurl = home_url( '/alla-bocker' );?>
 					<div class="error-buttons">
 						<div class="error-btn"><a href="<?php echo $url; ?>"><p>Startsida</p></a></div>
-						<div class="error-btn"><a href="<?php echo $booksurl; ?>"><p>Startsida</p></a></div>
+						<div class="error-btn"><a href="<?php echo $booksurl; ?>"><p>Alla böcker</p></a></div>
 					</div>
 				</div>
 			</article>

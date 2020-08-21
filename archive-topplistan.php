@@ -31,10 +31,19 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 							<div class="top-list-grid">
 									<?php
 								
-										$number = 0;
-										query_posts('meta_key=post_views_count&orderby=meta_value_num&order=DESC&posts_per_page=-1');
+									$number = 0;
+								   // the query
+								   $the_books = new WP_Query( array(
+									  'posts_per_page' => -1,
+									   'post_type'     => 'bok',
+									   'meta_key'	   => 'post_views_count',
+									   'orderby' 	   => 'meta_value_num',
+									   'order' 		   => 'DESC',
+								   )); 
+								?>
 
-										if (have_posts()) : while (have_posts()) : the_post();
+								<?php if ( $the_books->have_posts() ) :
+								   while ( $the_books->have_posts() ) : $the_books->the_post();
 											$number ++;
 										?>
 										<div class="a-book">

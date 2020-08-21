@@ -7,6 +7,10 @@
 // Define the version so we can easily replace it throughout the theme
 define( 'NAKED_VERSION', 1.0 );
 
+
+include "include/posttype.php";
+include "include/taxonomy.php";
+
 /*-----------------------------------------------------------------------------------*/
 /*  Set the maximum allowed width for any content in the theme
 /*-----------------------------------------------------------------------------------*/
