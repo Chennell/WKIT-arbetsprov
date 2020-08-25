@@ -55,7 +55,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 													<div class="top-list-innerdiv-text">
 														<h3><?php echo $number,'. ', the_title();?></h3>
 														<?php $forfattare = get_field('forfattare');?>
-														<p> &#8212 <?php echo $forfattare?></p>
+														<p class="forfattare"> &#8212 <?php echo $forfattare?></p>
 														<p><?php the_excerpt();?></p>
 													</div>
 												</div>

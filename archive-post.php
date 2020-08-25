@@ -45,7 +45,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 											<?php the_post_thumbnail('hero_thumbnail');?>
 											<h3><?php the_title();?></h3>
 											<?php $forfattare = get_field('forfattare');?>
-											<p> &#8212 <?php echo $forfattare?></p>
+											<p class='forfattare'> &#8212 <?php echo $forfattare?></p>
 										</a>
 									</div>
 

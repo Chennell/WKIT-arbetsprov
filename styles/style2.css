@@ -13,6 +13,13 @@
 		Mörk: #5a5a5a;
 	
 */
+html{
+	height: 100%
+}
+body{
+	min-height: 100%;
+	display: grid;
+}
 
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Playfair Display', serif !important;
@@ -29,12 +36,7 @@ p, ul, li a{
 	padding: 0;
 }
 .overflow{
-	/*overflow-x: hidden;*/
 	overflow-x: hidden;
-}
-.row-fluid{
-	/*padding: 0 20px;*/
-	
 }
 
 #content{
@@ -45,8 +47,6 @@ img{
 	width: 100%;
 	height: auto;
 }
-
-
 
 a:hover{
 	color: #60a3bc !important;
@@ -114,16 +114,14 @@ nav a{
 	width: 50%;
 }
 
-.on-hero-text{
-	float: right;
-	margin: 0 2em;
-}
-
 .on-hero-text h2{
 	line-height: 1em;
-	font-size: 2em;
+	font-size: 2.5em;
 }
 
+.on-hero-text p{
+	font-size: 1.5em;
+}
 
 
 /***********Start sida**********/
@@ -193,10 +191,13 @@ h2.news-section {
     margin: 0.5em 0 0.3em 0;
 }
 
-.a-book p, .start-section p, .first-section p{
-	font-size: 1.3em;
+.start-section p, .first-section p, .error-text-box p, .forfattare {
+	font-size: 1.3em !important;
 	color: #5a5a5a;
-	
+}
+
+.a-book p{
+	font-size: 1.2em;
 }
 
 
@@ -217,15 +218,6 @@ h2.news-section {
 .all-single-book{
 	margin-bottom: 4%;
 }
-
-.all-books-grid .a-book h3{
-	font-size: 1.3em;
-}
-.all-books-grid .a-book p{
-	font-size: 1.1em;
-}
-
-
 
 .all-books h2, .top-list-section h2{
 	margin-bottom: 2em;
@@ -264,15 +256,29 @@ h2.news-section {
 }
 
 .the_book p{
-	font-size: 1.3em;
+	font-size: 1.4em;
+    margin-top: 0.5em;
 }
 
 .single-book-img{
 	width: 50%;
 	margin: 0 auto;
 }
+.single-book-info{
+	margin-top:  2em;
+}
+
 .single-book-title-box{
 	text-align: center;
+	margin-bottom: 4em;
+}
+
+.single-book-title-box h1{
+	line-height: 1.2em !important;
+	font-size: 2.2em !important;
+}
+.single-book-title-box p{
+	font-size: 1.5em;
 }
 
 .single-content{
@@ -281,7 +287,7 @@ h2.news-section {
 
 .book-info {
     background-color: #82ccdd;
-    padding: 2em 1em;
+    padding: 2em ;
 }
 
 .book-info p {
@@ -331,7 +337,7 @@ h2.news-section {
 	margin: 0 0 10em 0;
 }
 
-p.error-text {
+.error-text-box p.error-text {
     font-size: 13em !important;
     color: #b1cfde;
     margin-bottom: 0;
@@ -346,7 +352,7 @@ p.error-text {
 
 .error-btn {
     display: inline-block;
-    margin-right: 3em;
+    /*margin-right: 3em;*/
 }
 
 .error-btn:nth-last-child {
@@ -376,6 +382,8 @@ footer{
 	background-color: #60a3bc;
 	margin: 0 -9999rem;
   	padding: 8em 9999rem;
+	grid-column: 1/-1;
+	margin-top: auto !important;
 }
 
 .site-footer{
@@ -385,7 +393,7 @@ footer{
 }
 
 .footer-box {
-    padding: 4em;
+    padding: 2em;
 }
 
 .footer-box h1, .footer-box h2, .footer-box h3, .footer-box h4, .footer-box h5, .footer-box h6{
@@ -393,10 +401,14 @@ footer{
 	font-family: 'Roboto', sans-serif !important;
 	margin-bottom:0.3em;
 }
+.footer-box h4{
+	font-size: 1.5em;
+}
 
 .footer-box a, .footer-box p{
 	color: #ffffff;
 	margin-bottom: 0.5em;
+	font-size: 1.2em;
 }
 
 .footer-box a:hover{
@@ -424,13 +436,6 @@ footer{
 		font-size: 3em;
 	}
 	
-	.all-books-grid .a-book h3{
-		font-size: 1.5em;
-	}
-	.all-books-grid .a-book p{
-		font-size: 1.2em;
-	}
-	
 	/*******Footer*******/
 	.site-footer{
 		grid-template-columns: 48% 48%;
@@ -448,6 +453,29 @@ footer{
 
 	.start-section a{
 		font-size: 1.6em;
+	}
+	
+	h2.news-section {
+		font-size: 2.5em !important;
+	}
+	
+	
+	.a-book h3{
+		font-size: 1.9em;
+	}
+	
+	
+	.forfattare , .start-section p, .first-section p, .error-text-box p {
+		font-size: 1.6em !important;
+	}
+	
+	.a-book p {
+		font-size: 1.4em;
+	}
+}
+@media only screen and (min-width: 480px){
+	.error-btn:nth-child(1) {
+		margin-right: 2em;
 	}
 }
 
@@ -477,7 +505,7 @@ footer{
 		font-size: 1.5em;
 	}
 	
-	div.the-content, .the_book{
+	div.the-content{
 		grid-template-columns: 40% 56%;
     	grid-gap: 4%;
 	}
@@ -485,7 +513,6 @@ footer{
 	.start-section-img{
 		margin-top: 0em;
 	}
-	
 	
 	/*Single page styling*/
 	.the_book{
@@ -496,6 +523,14 @@ footer{
 	
 	.single-book-img{
 		width: 100%;
+	}
+	
+	.single-book-info{
+		margin-top: 0;
+	}
+	
+	.single-book-title-box{
+		margin-bottom: 2em;
 	}
 	
 	.single-book-title-box h1{
@@ -535,9 +570,15 @@ footer{
 		padding: 1em 0;
 		grid-gap: 4.5%;
 	}
-		
-	.a-book h3{
-		font-size: 1.6em;
+	
+	.start-section p, .first-section p, .error-text-box p {
+		font-size: 1.5em;
+	}
+	
+	
+	/*Single book*/
+	.single-book-title-box p{
+		font-size: 1.7em;
 	}
 }
 
@@ -572,7 +613,15 @@ footer{
     	margin: 0 auto;
 	}
 	
-	.single-content p {
+	.all-books-grid .a-book h3{
+		font-size: 1.8em;
+	}
+	.all-books-grid .forfattare, .forfattare{
+		font-size: 1.6em !important;
+	}
+	
+	/**Single book page****/
+	.single-content p, .book-info p {
 		font-size: 1.5em;
 		line-height: 1.4em;
 	}
