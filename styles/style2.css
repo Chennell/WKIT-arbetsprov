@@ -168,12 +168,11 @@ div.the-content{
     margin: 0 auto 1em auto;
     border-bottom: 1px solid;
     display: table;
-	/*color: #60a3bc !important;*/
 	color: #007998 !important;
 }
 
 h2.news-section {
-    font-size: 2em !important;
+    font-size: 3.2em !important;
 }
 
 .book-grid{
@@ -204,7 +203,8 @@ h2.news-section {
 }
 
 .a-book p{
-	font-size: 1.2em;
+    font-size: 1.4em;
+    line-height: 1.3;
 }
 
 
@@ -263,7 +263,7 @@ h2.news-section {
 }
 
 .the_book p{
-	font-size: 1.4em;
+	font-size: 1.6em;
     margin-top: 0.5em;
 }
 
@@ -285,7 +285,7 @@ h2.news-section {
 	font-size: 2.2em !important;
 }
 .single-book-title-box p{
-	font-size: 1.5em;
+	font-size: 1.7em;
 }
 
 .single-content{
@@ -303,7 +303,7 @@ h2.news-section {
 
 .book-info p {
     /*color: #ffffff;*/
-    font-size: 1.4em;
+    font-size: 1.6em;
     margin-bottom: 1em;
 }
 
@@ -414,9 +414,13 @@ footer{
 }
 
 .footer-box a, .footer-box p{
-	color: #ffffff;
+	color: #313131;
 	margin-bottom: 0.5em;
 	font-size: 1.2em;
+}
+
+a.footer-link{
+	font-size: 1em;
 }
 
 .footer-box a:hover{
@@ -460,17 +464,12 @@ footer{
 	}
 	
 	.on-hero-text p{
-		font-size: 1.5em !important;
+		font-size: 1.6em !important;
 	}
 
 	.start-section a{
 		font-size: 1.6em;
 	}
-	
-	h2.news-section {
-		font-size: 2.5em !important;
-	}
-	
 	
 	.a-book h3{
 		font-size: 1.9em;
@@ -483,7 +482,8 @@ footer{
 	}
 	
 	.a-book p {
-		font-size: 1.4em;
+		font-size: 1.6em;
+		line-height: 1.5;
 	}
 }
 
@@ -517,7 +517,7 @@ footer{
 	}
 	
 	.on-hero-text p{
-		font-size: 1.5em;
+		font-size: 1.6em;
 	}
 	
 	div.the-content{
@@ -617,10 +617,6 @@ footer{
 		margin-top: 1em;
 	}
 	
-	.a-book p{
-		font-size: 1.5em;
-	}
-	
 	.all-books-grid{
 		grid-template-columns: 20% 20% 20% 20%;
     	grid-column-gap: 6.5%;
@@ -632,12 +628,12 @@ footer{
 		font-size: 1.8em;
 	}
 	.all-books-grid .forfattare, .forfattare{
-		font-size: 1.6em !important;
+		font-size: 1.7em !important;
 	}
 	
 	/**Single book page****/
 	.single-content p, .book-info p {
-		font-size: 1.5em;
+		font-size: 1.6em;
 		line-height: 1.4em;
 	}
 	
