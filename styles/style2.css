@@ -23,7 +23,8 @@ body{
 
 h1,h2,h3,h4,h5,h6{
 	font-family: 'Playfair Display', serif !important;
-	color: #60a3bc;
+	/*color: #60a3bc;*/
+	color: #007998;
 }
 
 p, ul, li a{
@@ -78,6 +79,10 @@ a:hover{
 	right: 0;
 }
 
+header nav ul li a{
+	color: #5a5a5a !important;
+}
+
 /*responsive menu*/
 #responsive-menu-wrapper{
 	margin-top: 30% !important;
@@ -116,11 +121,12 @@ nav a{
 
 .on-hero-text h2{
 	line-height: 1em;
-	font-size: 2.5em;
+	font-size: 2.2em;
 }
 
 .on-hero-text p{
-	font-size: 1.5em;
+	font-size: 1.2em;
+	margin: 0.5em 0 0 0;
 }
 
 
@@ -162,7 +168,8 @@ div.the-content{
     margin: 0 auto 1em auto;
     border-bottom: 1px solid;
     display: table;
-	color: #60a3bc !important;
+	/*color: #60a3bc !important;*/
+	color: #007998 !important;
 }
 
 h2.news-section {
@@ -286,12 +293,16 @@ h2.news-section {
 }
 
 .book-info {
-    background-color: #82ccdd;
-    padding: 2em ;
+	border: 3px solid #82ccdd;
+	border-radius: 3px;
+	background-color: #f3f3f3;
+	padding: 2em 3em;
+    /*background-color: #82ccdd;
+    padding: 2em ;*/
 }
 
 .book-info p {
-    color: #ffffff;
+    /*color: #ffffff;*/
     font-size: 1.4em;
     margin-bottom: 1em;
 }
@@ -345,14 +356,11 @@ h2.news-section {
 }
 
 .error-text-box a{
-	/*border: solid 1px #82ccdd;
-	padding: 1em 2em;*/
 	font-size: 1.5em;
 }
 
 .error-btn {
     display: inline-block;
-    /*margin-right: 3em;*/
 }
 
 .error-btn:nth-last-child {
@@ -397,7 +405,7 @@ footer{
 }
 
 .footer-box h1, .footer-box h2, .footer-box h3, .footer-box h4, .footer-box h5, .footer-box h6{
-	color: #5a5a5a;
+	color: #313131;
 	font-family: 'Roboto', sans-serif !important;
 	margin-bottom:0.3em;
 }
@@ -428,12 +436,7 @@ footer{
 		padding: 2em;
 	}
 	.on-hero-text{
-		margin: 2em 3em 0 0;
-	}
-	
-	.on-hero-text h2{
-		line-height: 1em;
-		font-size: 3em;
+		margin: 0;
 	}
 	
 	/*******Footer*******/
@@ -450,6 +453,15 @@ footer{
 	p, ul, li a{
 		/*font-size: 1.4em !important;*/
 	}
+	
+	.on-hero-text h2{
+		line-height: 1em;
+		font-size: 3em;
+	}
+	
+	.on-hero-text p{
+		font-size: 1.5em !important;
+	}
 
 	.start-section a{
 		font-size: 1.6em;
@@ -462,6 +474,7 @@ footer{
 	
 	.a-book h3{
 		font-size: 1.9em;
+		font-weight: 700;
 	}
 	
 	
@@ -473,7 +486,9 @@ footer{
 		font-size: 1.4em;
 	}
 }
-@media only screen and (min-width: 480px){
+
+
+@media only screen and (min-width: 560px){
 	.error-btn:nth-child(1) {
 		margin-right: 2em;
 	}
@@ -598,7 +613,7 @@ footer{
 	}
 	
 	.on-hero-text p{
-		font-size: 2em;
+		font-size: 2em !important;
 		margin-top: 1em;
 	}
 	
