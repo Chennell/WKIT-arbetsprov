@@ -137,12 +137,8 @@ div.the-content{
 	display: grid;
 }
 
-.start-section p {
-    font-size: 1.5em;
-}
-
 .start-section a{
-	font-size: 1.2em;
+	font-size: 1.4em;
 	font-family: 'Roboto', sans-serif;
 }
 
@@ -190,21 +186,22 @@ h2.news-section {
 	opacity: 0.6;
 }
 
-.a-book h3{
+.a-book h4{
 	font-family: 'Roboto', sans-serif !important;
-	font-size: 1.5em;
-	line-height: 1;
+	font-size: 1.8em;
+	line-height: 1.3;
     margin: 0.5em 0 0.3em 0;
 }
 
 .start-section p, .first-section p, .error-text-box p, .forfattare {
-	font-size: 1.3em !important;
+	font-size: 1.4em !important;
+	line-height: 1.35;
 	color: #5a5a5a;
 }
 
 .a-book p{
     font-size: 1.4em;
-    line-height: 1.3;
+    line-height: 1.35;
 }
 
 
@@ -263,7 +260,8 @@ h2.news-section {
 }
 
 .the_book p{
-	font-size: 1.6em;
+	font-size: 1.4em;
+	line-height: 1.35;
     margin-top: 0.5em;
 }
 
@@ -280,7 +278,7 @@ h2.news-section {
 	margin-bottom: 4em;
 }
 
-.single-book-title-box h1{
+.single-book-title-box h3{
 	line-height: 1.2em !important;
 	font-size: 2.2em !important;
 }
@@ -297,13 +295,10 @@ h2.news-section {
 	border-radius: 3px;
 	background-color: #f3f3f3;
 	padding: 2em 3em;
-    /*background-color: #82ccdd;
-    padding: 2em ;*/
 }
 
 .book-info p {
-    /*color: #ffffff;*/
-    font-size: 1.6em;
+    font-size: 1.4em;
     margin-bottom: 1em;
 }
 
@@ -471,8 +466,8 @@ a.footer-link{
 		font-size: 1.6em;
 	}
 	
-	.a-book h3{
-		font-size: 1.9em;
+	.a-book h4{
+		font-size: 2em;
 		font-weight: 700;
 	}
 	
@@ -484,6 +479,15 @@ a.footer-link{
 	.a-book p {
 		font-size: 1.6em;
 		line-height: 1.5;
+	}
+	
+	.the_book p{
+		font-size: 1.6em;
+		line-height: 1.5;
+	}
+	
+	.book-info p{
+		font-size: 1.6em;
 	}
 }
 
@@ -548,7 +552,7 @@ a.footer-link{
 		margin-bottom: 2em;
 	}
 	
-	.single-book-title-box h1{
+	.single-book-title-box h3{
 		font-size: 3em !important;
 		line-height: 1.2em !important;
 	}
@@ -624,7 +628,7 @@ a.footer-link{
     	margin: 0 auto;
 	}
 	
-	.all-books-grid .a-book h3{
+	.all-books-grid .a-book h4{
 		font-size: 1.8em;
 	}
 	.all-books-grid .forfattare, .forfattare{
@@ -672,12 +676,6 @@ a.footer-link{
 	.top-list-grid{
 		width: 70%;
 	}
-	/*.top-list-innerdiv{
-		grid-template-columns: 30% 40%;
-	}
-	.top-list-innerdiv-img{
-		width: 50%;
-	}*/
 	
 	
 	/*****Single page styling******/

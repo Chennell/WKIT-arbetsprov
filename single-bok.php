@@ -25,7 +25,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 							</div>
 							<div class="single-book-info">
 								<div class="single-book-title-box">
-									<h1 class="title"><?php the_title(); ?></h1>
+									<h3 class="title"><?php the_title(); ?></h3>
 									<?php $forfattare = get_field('forfattare');?>
 									<p> &#8212 <?php echo $forfattare?></p>
 								</div>
@@ -87,7 +87,7 @@ get_header(); // This fxn gets the header.php file and renders it ?>
 											<a href="<?php the_permalink()?>">
 
 												<?php the_post_thumbnail('book_img');?>
-												<h3><?php the_title();?></h3>
+												<h4><?php the_title();?></h4>
 												<?php $forfattare = get_field('forfattare');?>
 												<p class='forfattare'> &#8212 <?php echo $forfattare?></p>
 											</a>
